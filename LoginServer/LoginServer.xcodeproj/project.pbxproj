@@ -1,0 +1,834 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F71A1C3523FD446A00945202 /* libhiredis.0.14.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F71A1C3423FD446A00945202 /* libhiredis.0.14.dylib */; };
+		F71A1C3623FD446A00945202 /* libhiredis.0.14.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = F71A1C3423FD446A00945202 /* libhiredis.0.14.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F71A1C3823FD448700945202 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F71A1C3323FD441600945202 /* libiconv.tbd */; };
+		F74022DF23FDBD0A00584774 /* GateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022D423FDBD0800584774 /* GateManager.cpp */; };
+		F74022E023FDBD0A00584774 /* LoginService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022D723FDBD0900584774 /* LoginService.cpp */; };
+		F74022E123FDBD0A00584774 /* LoginSessionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022D823FDBD0900584774 /* LoginSessionModule.cpp */; };
+		F74022E223FDBD0A00584774 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022D923FDBD0900584774 /* main.cpp */; };
+		F74022E323FDBD0A00584774 /* LoginListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022DC23FDBD0900584774 /* LoginListener.cpp */; };
+		F74022E423FDBD0A00584774 /* LoginServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022DD23FDBD0900584774 /* LoginServer.cpp */; };
+		F740236623FDBD7D00584774 /* KxMemPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022ED23FDBD7D00584774 /* KxMemPool.cpp */; };
+		F740236723FDBD7D00584774 /* KxObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022EF23FDBD7D00584774 /* KxObject.cpp */; };
+		F740236823FDBD7D00584774 /* ServerConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022F223FDBD7D00584774 /* ServerConfig.cpp */; };
+		F740236923FDBD7D00584774 /* KxBaseServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022F523FDBD7D00584774 /* KxBaseServer.cpp */; };
+		F740236A23FDBD7D00584774 /* KxSelectPoller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022F923FDBD7D00584774 /* KxSelectPoller.cpp */; };
+		F740236B23FDBD7D00584774 /* KxBufferList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022FC23FDBD7D00584774 /* KxBufferList.cpp */; };
+		F740236C23FDBD7D00584774 /* KxUDPUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74022FE23FDBD7D00584774 /* KxUDPUnit.cpp */; };
+		F740236D23FDBD7D00584774 /* KxEpoller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740230023FDBD7D00584774 /* KxEpoller.cpp */; };
+		F740236E23FDBD7D00584774 /* KxTCPListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740230123FDBD7D00584774 /* KxTCPListener.cpp */; };
+		F740236F23FDBD7D00584774 /* KxTCPUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740230423FDBD7D00584774 /* KxTCPUnit.cpp */; };
+		F740237023FDBD7E00584774 /* KxTCPClienter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740230523FDBD7D00584774 /* KxTCPClienter.cpp */; };
+		F740237123FDBD7E00584774 /* KxTCPConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740230823FDBD7D00584774 /* KxTCPConnector.cpp */; };
+		F740237223FDBD7E00584774 /* KxSock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740230A23FDBD7D00584774 /* KxSock.cpp */; };
+		F740237323FDBD7E00584774 /* LogConsoleHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740230F23FDBD7D00584774 /* LogConsoleHandler.cpp */; };
+		F740237423FDBD7E00584774 /* LogFileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740231023FDBD7D00584774 /* LogFileHandler.cpp */; };
+		F740237523FDBD7E00584774 /* LogManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740231123FDBD7D00584774 /* LogManager.cpp */; };
+		F740237623FDBD7E00584774 /* GameUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740231523FDBD7D00584774 /* GameUser.cpp */; };
+		F740237723FDBD7E00584774 /* GameUserManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740231723FDBD7D00584774 /* GameUserManager.cpp */; };
+		F740237823FDBD7E00584774 /* UserModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740231923FDBD7D00584774 /* UserModel.cpp */; };
+		F740237923FDBD7E00584774 /* KxTimerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740231F23FDBD7D00584774 /* KxTimerManager.cpp */; };
+		F740237A23FDBD7E00584774 /* BufferData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740232023FDBD7D00584774 /* BufferData.cpp */; };
+		F740237B23FDBD7E00584774 /* IDBModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740232723FDBD7D00584774 /* IDBModel.cpp */; };
+		F740237C23FDBD7E00584774 /* CsvLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740232923FDBD7D00584774 /* CsvLoader.cpp */; };
+		F740237D23FDBD7E00584774 /* MD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740232D23FDBD7D00584774 /* MD5.cpp */; };
+		F740237E23FDBD7E00584774 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740233323FDBD7D00584774 /* DataManager.cpp */; };
+		F740237F23FDBD7E00584774 /* DataTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740233423FDBD7D00584774 /* DataTable.cpp */; };
+		F740238023FDBD7E00584774 /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740233823FDBD7D00584774 /* Observer.cpp */; };
+		F740238123FDBD7E00584774 /* StringFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740233B23FDBD7D00584774 /* StringFormat.cpp */; };
+		F740238223FDBD7E00584774 /* ValueCrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740233F23FDBD7D00584774 /* ValueCrypt.cpp */; };
+		F740238323FDBD7E00584774 /* UrlEncode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740234023FDBD7D00584774 /* UrlEncode.cpp */; };
+		F740238423FDBD7E00584774 /* XML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740234323FDBD7D00584774 /* XML.cpp */; };
+		F740238523FDBD7E00584774 /* TEACrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740234523FDBD7D00584774 /* TEACrypt.cpp */; };
+		F740238623FDBD7E00584774 /* Value_.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740234923FDBD7D00584774 /* Value_.cpp */; };
+		F740238723FDBD7E00584774 /* Data_.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740234B23FDBD7D00584774 /* Data_.cpp */; };
+		F740238823FDBD7E00584774 /* DBManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740235E23FDBD7D00584774 /* DBManager.cpp */; };
+		F740238923FDBD7E00584774 /* RedisStorer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740235F23FDBD7D00584774 /* RedisStorer.cpp */; };
+		F740238A23FDBD7E00584774 /* IStorer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740236023FDBD7D00584774 /* IStorer.cpp */; };
+		F740238B23FDBD7E00584774 /* LocalDefault.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740236223FDBD7D00584774 /* LocalDefault.cpp */; };
+		F740238C23FDBD7E00584774 /* base64_.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F740236323FDBD7D00584774 /* base64_.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F71A1C2623FD42DA00945202 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F71A1C3723FD446A00945202 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F71A1C3623FD446A00945202 /* libhiredis.0.14.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F71A1C2823FD42DA00945202 /* LoginServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LoginServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71A1C3323FD441600945202 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		F71A1C3423FD446A00945202 /* libhiredis.0.14.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhiredis.0.14.dylib; path = ../../../../../usr/local/Cellar/hiredis/0.14.0/lib/libhiredis.0.14.dylib; sourceTree = "<group>"; };
+		F74022D423FDBD0800584774 /* GateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GateManager.cpp; sourceTree = "<group>"; };
+		F74022D523FDBD0900584774 /* LoginServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServer.h; sourceTree = "<group>"; };
+		F74022D623FDBD0900584774 /* LoginListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginListener.h; sourceTree = "<group>"; };
+		F74022D723FDBD0900584774 /* LoginService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginService.cpp; sourceTree = "<group>"; };
+		F74022D823FDBD0900584774 /* LoginSessionModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginSessionModule.cpp; sourceTree = "<group>"; };
+		F74022D923FDBD0900584774 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F74022DA23FDBD0900584774 /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		F74022DB23FDBD0900584774 /* LoginSessionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSessionModule.h; sourceTree = "<group>"; };
+		F74022DC23FDBD0900584774 /* LoginListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginListener.cpp; sourceTree = "<group>"; };
+		F74022DD23FDBD0900584774 /* LoginServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginServer.cpp; sourceTree = "<group>"; };
+		F74022DE23FDBD0900584774 /* GateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GateManager.h; sourceTree = "<group>"; };
+		F74022EA23FDBD7D00584774 /* KxCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxCore.h; sourceTree = "<group>"; };
+		F74022EB23FDBD7D00584774 /* KxObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxObject.h; sourceTree = "<group>"; };
+		F74022EC23FDBD7D00584774 /* KxPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxPlatform.h; sourceTree = "<group>"; };
+		F74022ED23FDBD7D00584774 /* KxMemPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxMemPool.cpp; sourceTree = "<group>"; };
+		F74022EE23FDBD7D00584774 /* KxMemPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMemPool.h; sourceTree = "<group>"; };
+		F74022EF23FDBD7D00584774 /* KxObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxObject.cpp; sourceTree = "<group>"; };
+		F74022F123FDBD7D00584774 /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
+		F74022F223FDBD7D00584774 /* ServerConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ServerConfig.cpp; sourceTree = "<group>"; };
+		F74022F323FDBD7D00584774 /* Head.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Head.h; sourceTree = "<group>"; };
+		F74022F423FDBD7D00584774 /* ServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConfig.h; sourceTree = "<group>"; };
+		F74022F523FDBD7D00584774 /* KxBaseServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxBaseServer.cpp; sourceTree = "<group>"; };
+		F74022F623FDBD7D00584774 /* KxBaseServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxBaseServer.h; sourceTree = "<group>"; };
+		F74022F723FDBD7D00584774 /* KXServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KXServer.h; sourceTree = "<group>"; };
+		F74022F923FDBD7D00584774 /* KxSelectPoller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxSelectPoller.cpp; sourceTree = "<group>"; };
+		F74022FA23FDBD7D00584774 /* KxSock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxSock.h; sourceTree = "<group>"; };
+		F74022FB23FDBD7D00584774 /* KxTCPUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxTCPUnit.h; sourceTree = "<group>"; };
+		F74022FC23FDBD7D00584774 /* KxBufferList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxBufferList.cpp; sourceTree = "<group>"; };
+		F74022FD23FDBD7D00584774 /* KxTCPConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxTCPConnector.h; sourceTree = "<group>"; };
+		F74022FE23FDBD7D00584774 /* KxUDPUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxUDPUnit.cpp; sourceTree = "<group>"; };
+		F74022FF23FDBD7D00584774 /* KxEpoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxEpoller.h; sourceTree = "<group>"; };
+		F740230023FDBD7D00584774 /* KxEpoller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxEpoller.cpp; sourceTree = "<group>"; };
+		F740230123FDBD7D00584774 /* KxTCPListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxTCPListener.cpp; sourceTree = "<group>"; };
+		F740230223FDBD7D00584774 /* KxBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxBufferList.h; sourceTree = "<group>"; };
+		F740230323FDBD7D00584774 /* KxSelectPoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxSelectPoller.h; sourceTree = "<group>"; };
+		F740230423FDBD7D00584774 /* KxTCPUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxTCPUnit.cpp; sourceTree = "<group>"; };
+		F740230523FDBD7D00584774 /* KxTCPClienter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxTCPClienter.cpp; sourceTree = "<group>"; };
+		F740230623FDBD7D00584774 /* KxCommInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxCommInterfaces.h; sourceTree = "<group>"; };
+		F740230723FDBD7D00584774 /* KxTCPListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxTCPListener.h; sourceTree = "<group>"; };
+		F740230823FDBD7D00584774 /* KxTCPConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxTCPConnector.cpp; sourceTree = "<group>"; };
+		F740230923FDBD7D00584774 /* KxUDPUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxUDPUnit.h; sourceTree = "<group>"; };
+		F740230A23FDBD7D00584774 /* KxSock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxSock.cpp; sourceTree = "<group>"; };
+		F740230B23FDBD7D00584774 /* KxTCPClienter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxTCPClienter.h; sourceTree = "<group>"; };
+		F740230D23FDBD7D00584774 /* LogFileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFileHandler.h; sourceTree = "<group>"; };
+		F740230E23FDBD7D00584774 /* ILogHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILogHandler.h; sourceTree = "<group>"; };
+		F740230F23FDBD7D00584774 /* LogConsoleHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogConsoleHandler.cpp; sourceTree = "<group>"; };
+		F740231023FDBD7D00584774 /* LogFileHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogFileHandler.cpp; sourceTree = "<group>"; };
+		F740231123FDBD7D00584774 /* LogManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogManager.cpp; sourceTree = "<group>"; };
+		F740231223FDBD7D00584774 /* LogConsoleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogConsoleHandler.h; sourceTree = "<group>"; };
+		F740231323FDBD7D00584774 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
+		F740231523FDBD7D00584774 /* GameUser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameUser.cpp; sourceTree = "<group>"; };
+		F740231623FDBD7D00584774 /* GameUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUserManager.h; sourceTree = "<group>"; };
+		F740231723FDBD7D00584774 /* GameUserManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameUserManager.cpp; sourceTree = "<group>"; };
+		F740231923FDBD7D00584774 /* UserModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserModel.cpp; sourceTree = "<group>"; };
+		F740231A23FDBD7D00584774 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		F740231B23FDBD7D00584774 /* GameUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUser.h; sourceTree = "<group>"; };
+		F740231D23FDBD7D00584774 /* ModelDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelDef.h; sourceTree = "<group>"; };
+		F740231E23FDBD7D00584774 /* BufferData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferData.h; sourceTree = "<group>"; };
+		F740231F23FDBD7D00584774 /* KxTimerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KxTimerManager.cpp; sourceTree = "<group>"; };
+		F740232023FDBD7D00584774 /* BufferData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BufferData.cpp; sourceTree = "<group>"; };
+		F740232123FDBD7D00584774 /* BaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModule.h; sourceTree = "<group>"; };
+		F740232223FDBD7D00584774 /* CsvLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CsvLoader.h; sourceTree = "<group>"; };
+		F740232323FDBD7D00584774 /* KxTimerCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxTimerCallback.h; sourceTree = "<group>"; };
+		F740232423FDBD7D00584774 /* KxTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxTimerManager.h; sourceTree = "<group>"; };
+		F740232523FDBD7D00584774 /* BufferTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferTool.h; sourceTree = "<group>"; };
+		F740232623FDBD7D00584774 /* KxTimeVal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxTimeVal.h; sourceTree = "<group>"; };
+		F740232723FDBD7D00584774 /* IDBModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IDBModel.cpp; sourceTree = "<group>"; };
+		F740232823FDBD7D00584774 /* IDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDBModel.h; sourceTree = "<group>"; };
+		F740232923FDBD7D00584774 /* CsvLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CsvLoader.cpp; sourceTree = "<group>"; };
+		F740232B23FDBD7D00584774 /* CommonHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHead.h; sourceTree = "<group>"; };
+		F740232D23FDBD7D00584774 /* MD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MD5.cpp; sourceTree = "<group>"; };
+		F740232E23FDBD7D00584774 /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		F740232F23FDBD7D00584774 /* MD5Def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Def.h; sourceTree = "<group>"; };
+		F740233123FDBD7D00584774 /* DataTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTable.h; sourceTree = "<group>"; };
+		F740233223FDBD7D00584774 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		F740233323FDBD7D00584774 /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManager.cpp; sourceTree = "<group>"; };
+		F740233423FDBD7D00584774 /* DataTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataTable.cpp; sourceTree = "<group>"; };
+		F740233523FDBD7D00584774 /* CSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
+		F740233723FDBD7D00584774 /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		F740233823FDBD7D00584774 /* Observer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Observer.cpp; sourceTree = "<group>"; };
+		F740233A23FDBD7D00584774 /* StringFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringFormat.h; sourceTree = "<group>"; };
+		F740233B23FDBD7D00584774 /* StringFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringFormat.cpp; sourceTree = "<group>"; };
+		F740233D23FDBD7D00584774 /* ValueCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueCrypt.h; sourceTree = "<group>"; };
+		F740233E23FDBD7D00584774 /* UrlEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlEncode.h; sourceTree = "<group>"; };
+		F740233F23FDBD7D00584774 /* ValueCrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ValueCrypt.cpp; sourceTree = "<group>"; };
+		F740234023FDBD7D00584774 /* UrlEncode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UrlEncode.cpp; sourceTree = "<group>"; };
+		F740234223FDBD7D00584774 /* XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XML.h; sourceTree = "<group>"; };
+		F740234323FDBD7D00584774 /* XML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XML.cpp; sourceTree = "<group>"; };
+		F740234523FDBD7D00584774 /* TEACrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TEACrypt.cpp; sourceTree = "<group>"; };
+		F740234623FDBD7D00584774 /* TEACrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEACrypt.h; sourceTree = "<group>"; };
+		F740234823FDBD7D00584774 /* Value_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value_.h; sourceTree = "<group>"; };
+		F740234923FDBD7D00584774 /* Value_.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Value_.cpp; sourceTree = "<group>"; };
+		F740234A23FDBD7D00584774 /* Data_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data_.h; sourceTree = "<group>"; };
+		F740234B23FDBD7D00584774 /* Data_.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Data_.cpp; sourceTree = "<group>"; };
+		F740234D23FDBD7D00584774 /* IStorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IStorer.h; sourceTree = "<group>"; };
+		F740234E23FDBD7D00584774 /* RedisStorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedisStorer.h; sourceTree = "<group>"; };
+		F740235023FDBD7D00584774 /* hiredis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hiredis.h; sourceTree = "<group>"; };
+		F740235223FDBD7D00584774 /* glib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glib.h; sourceTree = "<group>"; };
+		F740235323FDBD7D00584774 /* libev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libev.h; sourceTree = "<group>"; };
+		F740235423FDBD7D00584774 /* ae.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ae.h; sourceTree = "<group>"; };
+		F740235523FDBD7D00584774 /* libevent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libevent.h; sourceTree = "<group>"; };
+		F740235623FDBD7D00584774 /* libuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libuv.h; sourceTree = "<group>"; };
+		F740235723FDBD7D00584774 /* macosx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macosx.h; sourceTree = "<group>"; };
+		F740235823FDBD7D00584774 /* qt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qt.h; sourceTree = "<group>"; };
+		F740235923FDBD7D00584774 /* ivykis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ivykis.h; sourceTree = "<group>"; };
+		F740235A23FDBD7D00584774 /* async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = async.h; sourceTree = "<group>"; };
+		F740235B23FDBD7D00584774 /* sds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sds.h; sourceTree = "<group>"; };
+		F740235C23FDBD7D00584774 /* read.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = read.h; sourceTree = "<group>"; };
+		F740235D23FDBD7D00584774 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		F740235E23FDBD7D00584774 /* DBManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DBManager.cpp; sourceTree = "<group>"; };
+		F740235F23FDBD7D00584774 /* RedisStorer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RedisStorer.cpp; sourceTree = "<group>"; };
+		F740236023FDBD7D00584774 /* IStorer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IStorer.cpp; sourceTree = "<group>"; };
+		F740236223FDBD7D00584774 /* LocalDefault.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LocalDefault.cpp; sourceTree = "<group>"; };
+		F740236323FDBD7D00584774 /* base64_.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64_.cpp; sourceTree = "<group>"; };
+		F740236423FDBD7D00584774 /* base64_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64_.h; sourceTree = "<group>"; };
+		F740236523FDBD7D00584774 /* LocalDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDefault.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F71A1C2523FD42DA00945202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71A1C3823FD448700945202 /* libiconv.tbd in Frameworks */,
+				F71A1C3523FD446A00945202 /* libhiredis.0.14.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F71A1C1F23FD42DA00945202 = {
+			isa = PBXGroup;
+			children = (
+				F71A1C2A23FD42DA00945202 /* LoginServer */,
+				F71A1C2923FD42DA00945202 /* Products */,
+				F71A1C3223FD441600945202 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F71A1C2923FD42DA00945202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F71A1C2823FD42DA00945202 /* LoginServer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F71A1C2A23FD42DA00945202 /* LoginServer */ = {
+			isa = PBXGroup;
+			children = (
+				F74022E723FDBD7D00584774 /* Extern */,
+				F74022D423FDBD0800584774 /* GateManager.cpp */,
+				F74022DE23FDBD0900584774 /* GateManager.h */,
+				F74022DC23FDBD0900584774 /* LoginListener.cpp */,
+				F74022D623FDBD0900584774 /* LoginListener.h */,
+				F74022DD23FDBD0900584774 /* LoginServer.cpp */,
+				F74022D523FDBD0900584774 /* LoginServer.h */,
+				F74022D723FDBD0900584774 /* LoginService.cpp */,
+				F74022DA23FDBD0900584774 /* LoginService.h */,
+				F74022D823FDBD0900584774 /* LoginSessionModule.cpp */,
+				F74022DB23FDBD0900584774 /* LoginSessionModule.h */,
+				F74022D923FDBD0900584774 /* main.cpp */,
+			);
+			path = LoginServer;
+			sourceTree = "<group>";
+		};
+		F71A1C3223FD441600945202 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F71A1C3423FD446A00945202 /* libhiredis.0.14.dylib */,
+				F71A1C3323FD441600945202 /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F74022E723FDBD7D00584774 /* Extern */ = {
+			isa = PBXGroup;
+			children = (
+				F74022E823FDBD7D00584774 /* ServerFrame */,
+				F740232A23FDBD7D00584774 /* Tool */,
+			);
+			name = Extern;
+			path = ../../Extern;
+			sourceTree = "<group>";
+		};
+		F74022E823FDBD7D00584774 /* ServerFrame */ = {
+			isa = PBXGroup;
+			children = (
+				F74022E923FDBD7D00584774 /* core */,
+				F74022F023FDBD7D00584774 /* server */,
+				F74022F723FDBD7D00584774 /* KXServer.h */,
+				F74022F823FDBD7D00584774 /* commnication */,
+				F740230C23FDBD7D00584774 /* log */,
+				F740231423FDBD7D00584774 /* data */,
+				F740231C23FDBD7D00584774 /* helper */,
+			);
+			path = ServerFrame;
+			sourceTree = "<group>";
+		};
+		F74022E923FDBD7D00584774 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				F74022EA23FDBD7D00584774 /* KxCore.h */,
+				F74022EB23FDBD7D00584774 /* KxObject.h */,
+				F74022EC23FDBD7D00584774 /* KxPlatform.h */,
+				F74022ED23FDBD7D00584774 /* KxMemPool.cpp */,
+				F74022EE23FDBD7D00584774 /* KxMemPool.h */,
+				F74022EF23FDBD7D00584774 /* KxObject.cpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		F74022F023FDBD7D00584774 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				F74022F123FDBD7D00584774 /* Protocol.h */,
+				F74022F223FDBD7D00584774 /* ServerConfig.cpp */,
+				F74022F323FDBD7D00584774 /* Head.h */,
+				F74022F423FDBD7D00584774 /* ServerConfig.h */,
+				F74022F523FDBD7D00584774 /* KxBaseServer.cpp */,
+				F74022F623FDBD7D00584774 /* KxBaseServer.h */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		F74022F823FDBD7D00584774 /* commnication */ = {
+			isa = PBXGroup;
+			children = (
+				F74022F923FDBD7D00584774 /* KxSelectPoller.cpp */,
+				F74022FA23FDBD7D00584774 /* KxSock.h */,
+				F74022FB23FDBD7D00584774 /* KxTCPUnit.h */,
+				F74022FC23FDBD7D00584774 /* KxBufferList.cpp */,
+				F74022FD23FDBD7D00584774 /* KxTCPConnector.h */,
+				F74022FE23FDBD7D00584774 /* KxUDPUnit.cpp */,
+				F74022FF23FDBD7D00584774 /* KxEpoller.h */,
+				F740230023FDBD7D00584774 /* KxEpoller.cpp */,
+				F740230123FDBD7D00584774 /* KxTCPListener.cpp */,
+				F740230223FDBD7D00584774 /* KxBufferList.h */,
+				F740230323FDBD7D00584774 /* KxSelectPoller.h */,
+				F740230423FDBD7D00584774 /* KxTCPUnit.cpp */,
+				F740230523FDBD7D00584774 /* KxTCPClienter.cpp */,
+				F740230623FDBD7D00584774 /* KxCommInterfaces.h */,
+				F740230723FDBD7D00584774 /* KxTCPListener.h */,
+				F740230823FDBD7D00584774 /* KxTCPConnector.cpp */,
+				F740230923FDBD7D00584774 /* KxUDPUnit.h */,
+				F740230A23FDBD7D00584774 /* KxSock.cpp */,
+				F740230B23FDBD7D00584774 /* KxTCPClienter.h */,
+			);
+			path = commnication;
+			sourceTree = "<group>";
+		};
+		F740230C23FDBD7D00584774 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				F740230D23FDBD7D00584774 /* LogFileHandler.h */,
+				F740230E23FDBD7D00584774 /* ILogHandler.h */,
+				F740230F23FDBD7D00584774 /* LogConsoleHandler.cpp */,
+				F740231023FDBD7D00584774 /* LogFileHandler.cpp */,
+				F740231123FDBD7D00584774 /* LogManager.cpp */,
+				F740231223FDBD7D00584774 /* LogConsoleHandler.h */,
+				F740231323FDBD7D00584774 /* LogManager.h */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
+		F740231423FDBD7D00584774 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				F740231523FDBD7D00584774 /* GameUser.cpp */,
+				F740231623FDBD7D00584774 /* GameUserManager.h */,
+				F740231723FDBD7D00584774 /* GameUserManager.cpp */,
+				F740231823FDBD7D00584774 /* DataModel */,
+				F740231B23FDBD7D00584774 /* GameUser.h */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		F740231823FDBD7D00584774 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F740231923FDBD7D00584774 /* UserModel.cpp */,
+				F740231A23FDBD7D00584774 /* UserModel.h */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		F740231C23FDBD7D00584774 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				F740231D23FDBD7D00584774 /* ModelDef.h */,
+				F740231E23FDBD7D00584774 /* BufferData.h */,
+				F740231F23FDBD7D00584774 /* KxTimerManager.cpp */,
+				F740232023FDBD7D00584774 /* BufferData.cpp */,
+				F740232123FDBD7D00584774 /* BaseModule.h */,
+				F740232223FDBD7D00584774 /* CsvLoader.h */,
+				F740232323FDBD7D00584774 /* KxTimerCallback.h */,
+				F740232423FDBD7D00584774 /* KxTimerManager.h */,
+				F740232523FDBD7D00584774 /* BufferTool.h */,
+				F740232623FDBD7D00584774 /* KxTimeVal.h */,
+				F740232723FDBD7D00584774 /* IDBModel.cpp */,
+				F740232823FDBD7D00584774 /* IDBModel.h */,
+				F740232923FDBD7D00584774 /* CsvLoader.cpp */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		F740232A23FDBD7D00584774 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				F740232B23FDBD7D00584774 /* CommonHead.h */,
+				F740232C23FDBD7D00584774 /* MD5 */,
+				F740233023FDBD7D00584774 /* DataManager */,
+				F740233623FDBD7D00584774 /* Observer */,
+				F740233923FDBD7D00584774 /* StringFormat */,
+				F740233C23FDBD7D00584774 /* Utils */,
+				F740234123FDBD7D00584774 /* XML */,
+				F740234423FDBD7D00584774 /* Tea */,
+				F740234723FDBD7D00584774 /* Common */,
+				F740234C23FDBD7D00584774 /* DBDriver */,
+				F740236123FDBD7D00584774 /* LocalDefault */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		F740232C23FDBD7D00584774 /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				F740232D23FDBD7D00584774 /* MD5.cpp */,
+				F740232E23FDBD7D00584774 /* MD5.h */,
+				F740232F23FDBD7D00584774 /* MD5Def.h */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		F740233023FDBD7D00584774 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F740233123FDBD7D00584774 /* DataTable.h */,
+				F740233223FDBD7D00584774 /* DataManager.h */,
+				F740233323FDBD7D00584774 /* DataManager.cpp */,
+				F740233423FDBD7D00584774 /* DataTable.cpp */,
+				F740233523FDBD7D00584774 /* CSVParser.h */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		F740233623FDBD7D00584774 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				F740233723FDBD7D00584774 /* Observer.h */,
+				F740233823FDBD7D00584774 /* Observer.cpp */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
+		F740233923FDBD7D00584774 /* StringFormat */ = {
+			isa = PBXGroup;
+			children = (
+				F740233A23FDBD7D00584774 /* StringFormat.h */,
+				F740233B23FDBD7D00584774 /* StringFormat.cpp */,
+			);
+			path = StringFormat;
+			sourceTree = "<group>";
+		};
+		F740233C23FDBD7D00584774 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F740233D23FDBD7D00584774 /* ValueCrypt.h */,
+				F740233E23FDBD7D00584774 /* UrlEncode.h */,
+				F740233F23FDBD7D00584774 /* ValueCrypt.cpp */,
+				F740234023FDBD7D00584774 /* UrlEncode.cpp */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F740234123FDBD7D00584774 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				F740234223FDBD7D00584774 /* XML.h */,
+				F740234323FDBD7D00584774 /* XML.cpp */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+		F740234423FDBD7D00584774 /* Tea */ = {
+			isa = PBXGroup;
+			children = (
+				F740234523FDBD7D00584774 /* TEACrypt.cpp */,
+				F740234623FDBD7D00584774 /* TEACrypt.h */,
+			);
+			path = Tea;
+			sourceTree = "<group>";
+		};
+		F740234723FDBD7D00584774 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F740234823FDBD7D00584774 /* Value_.h */,
+				F740234923FDBD7D00584774 /* Value_.cpp */,
+				F740234A23FDBD7D00584774 /* Data_.h */,
+				F740234B23FDBD7D00584774 /* Data_.cpp */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F740234C23FDBD7D00584774 /* DBDriver */ = {
+			isa = PBXGroup;
+			children = (
+				F740234D23FDBD7D00584774 /* IStorer.h */,
+				F740234E23FDBD7D00584774 /* RedisStorer.h */,
+				F740234F23FDBD7D00584774 /* hiredis */,
+				F740235D23FDBD7D00584774 /* DBManager.h */,
+				F740235E23FDBD7D00584774 /* DBManager.cpp */,
+				F740235F23FDBD7D00584774 /* RedisStorer.cpp */,
+				F740236023FDBD7D00584774 /* IStorer.cpp */,
+			);
+			path = DBDriver;
+			sourceTree = "<group>";
+		};
+		F740234F23FDBD7D00584774 /* hiredis */ = {
+			isa = PBXGroup;
+			children = (
+				F740235023FDBD7D00584774 /* hiredis.h */,
+				F740235123FDBD7D00584774 /* adapters */,
+				F740235A23FDBD7D00584774 /* async.h */,
+				F740235B23FDBD7D00584774 /* sds.h */,
+				F740235C23FDBD7D00584774 /* read.h */,
+			);
+			path = hiredis;
+			sourceTree = "<group>";
+		};
+		F740235123FDBD7D00584774 /* adapters */ = {
+			isa = PBXGroup;
+			children = (
+				F740235223FDBD7D00584774 /* glib.h */,
+				F740235323FDBD7D00584774 /* libev.h */,
+				F740235423FDBD7D00584774 /* ae.h */,
+				F740235523FDBD7D00584774 /* libevent.h */,
+				F740235623FDBD7D00584774 /* libuv.h */,
+				F740235723FDBD7D00584774 /* macosx.h */,
+				F740235823FDBD7D00584774 /* qt.h */,
+				F740235923FDBD7D00584774 /* ivykis.h */,
+			);
+			path = adapters;
+			sourceTree = "<group>";
+		};
+		F740236123FDBD7D00584774 /* LocalDefault */ = {
+			isa = PBXGroup;
+			children = (
+				F740236223FDBD7D00584774 /* LocalDefault.cpp */,
+				F740236323FDBD7D00584774 /* base64_.cpp */,
+				F740236423FDBD7D00584774 /* base64_.h */,
+				F740236523FDBD7D00584774 /* LocalDefault.h */,
+			);
+			path = LocalDefault;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F71A1C2723FD42DA00945202 /* LoginServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F71A1C2F23FD42DA00945202 /* Build configuration list for PBXNativeTarget "LoginServer" */;
+			buildPhases = (
+				F71A1C2423FD42DA00945202 /* Sources */,
+				F71A1C2523FD42DA00945202 /* Frameworks */,
+				F71A1C2623FD42DA00945202 /* CopyFiles */,
+				F71A1C3723FD446A00945202 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginServer;
+			productName = LoginServer;
+			productReference = F71A1C2823FD42DA00945202 /* LoginServer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F71A1C2023FD42DA00945202 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Alen;
+				TargetAttributes = {
+					F71A1C2723FD42DA00945202 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F71A1C2323FD42DA00945202 /* Build configuration list for PBXProject "LoginServer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F71A1C1F23FD42DA00945202;
+			productRefGroup = F71A1C2923FD42DA00945202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F71A1C2723FD42DA00945202 /* LoginServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F71A1C2423FD42DA00945202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F740237F23FDBD7E00584774 /* DataTable.cpp in Sources */,
+				F740238023FDBD7E00584774 /* Observer.cpp in Sources */,
+				F740237E23FDBD7E00584774 /* DataManager.cpp in Sources */,
+				F740236A23FDBD7D00584774 /* KxSelectPoller.cpp in Sources */,
+				F740237423FDBD7E00584774 /* LogFileHandler.cpp in Sources */,
+				F740238823FDBD7E00584774 /* DBManager.cpp in Sources */,
+				F740237023FDBD7E00584774 /* KxTCPClienter.cpp in Sources */,
+				F74022E323FDBD0A00584774 /* LoginListener.cpp in Sources */,
+				F740236E23FDBD7D00584774 /* KxTCPListener.cpp in Sources */,
+				F740236623FDBD7D00584774 /* KxMemPool.cpp in Sources */,
+				F740237923FDBD7E00584774 /* KxTimerManager.cpp in Sources */,
+				F740237323FDBD7E00584774 /* LogConsoleHandler.cpp in Sources */,
+				F740237A23FDBD7E00584774 /* BufferData.cpp in Sources */,
+				F74022E123FDBD0A00584774 /* LoginSessionModule.cpp in Sources */,
+				F740238223FDBD7E00584774 /* ValueCrypt.cpp in Sources */,
+				F740236823FDBD7D00584774 /* ServerConfig.cpp in Sources */,
+				F740236923FDBD7D00584774 /* KxBaseServer.cpp in Sources */,
+				F740238B23FDBD7E00584774 /* LocalDefault.cpp in Sources */,
+				F740237C23FDBD7E00584774 /* CsvLoader.cpp in Sources */,
+				F740237823FDBD7E00584774 /* UserModel.cpp in Sources */,
+				F740236B23FDBD7D00584774 /* KxBufferList.cpp in Sources */,
+				F740238623FDBD7E00584774 /* Value_.cpp in Sources */,
+				F740236F23FDBD7D00584774 /* KxTCPUnit.cpp in Sources */,
+				F74022DF23FDBD0A00584774 /* GateManager.cpp in Sources */,
+				F74022E223FDBD0A00584774 /* main.cpp in Sources */,
+				F740237D23FDBD7E00584774 /* MD5.cpp in Sources */,
+				F740237B23FDBD7E00584774 /* IDBModel.cpp in Sources */,
+				F740237623FDBD7E00584774 /* GameUser.cpp in Sources */,
+				F740237223FDBD7E00584774 /* KxSock.cpp in Sources */,
+				F740238A23FDBD7E00584774 /* IStorer.cpp in Sources */,
+				F740238723FDBD7E00584774 /* Data_.cpp in Sources */,
+				F740238423FDBD7E00584774 /* XML.cpp in Sources */,
+				F740237723FDBD7E00584774 /* GameUserManager.cpp in Sources */,
+				F74022E423FDBD0A00584774 /* LoginServer.cpp in Sources */,
+				F740237523FDBD7E00584774 /* LogManager.cpp in Sources */,
+				F740238C23FDBD7E00584774 /* base64_.cpp in Sources */,
+				F74022E023FDBD0A00584774 /* LoginService.cpp in Sources */,
+				F740237123FDBD7E00584774 /* KxTCPConnector.cpp in Sources */,
+				F740236C23FDBD7D00584774 /* KxUDPUnit.cpp in Sources */,
+				F740238923FDBD7E00584774 /* RedisStorer.cpp in Sources */,
+				F740236D23FDBD7D00584774 /* KxEpoller.cpp in Sources */,
+				F740236723FDBD7D00584774 /* KxObject.cpp in Sources */,
+				F740238523FDBD7E00584774 /* TEACrypt.cpp in Sources */,
+				F740238123FDBD7E00584774 /* StringFormat.cpp in Sources */,
+				F740238323FDBD7E00584774 /* UrlEncode.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F71A1C2D23FD42DA00945202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F71A1C2E23FD42DA00945202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F71A1C3023FD42DA00945202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 329MXKFA9P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/hiredis/0.14.0/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = (
+					../Extern/ServerFrame/,
+					../Extern/Tool/,
+					../Extern/ServerFrame/commnication/,
+					../Extern/ServerFrame/core/,
+					../Extern/ServerFrame/server/,
+					../Extern/ServerFrame/log/,
+					../Extern/ServerFrame/data/,
+					../Extern/ServerFrame/helper/,
+					../Extern/Tool/,
+					../Extern/Tool/MD5/,
+					../Extern/Tool/DataManager/,
+					../Extern/Tool/StringFormat/,
+					../Extern/Tool/Utils/,
+					../Extern/Tool/XML/,
+					../Extern/Tool/Tea/,
+					../Extern/Tool/Common/,
+					../Extern/Tool/DBDriver/,
+					../Extern/Tool/LocalDefault/,
+				);
+			};
+			name = Debug;
+		};
+		F71A1C3123FD42DA00945202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 329MXKFA9P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/hiredis/0.14.0/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F71A1C2323FD42DA00945202 /* Build configuration list for PBXProject "LoginServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71A1C2D23FD42DA00945202 /* Debug */,
+				F71A1C2E23FD42DA00945202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F71A1C2F23FD42DA00945202 /* Build configuration list for PBXNativeTarget "LoginServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71A1C3023FD42DA00945202 /* Debug */,
+				F71A1C3123FD42DA00945202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F71A1C2023FD42DA00945202 /* Project object */;
+}
